@@ -52,6 +52,8 @@ const ALERT_HANDLE_ERR = 'Something went wrong while handling the alert!';
 const BROWSER_EXECUTE_FUNC_ERR = 'Something went wrong while executing the browser function!';
 const INVALID_MODE = 'Not a valid mode';
 
+const DOWNLOAD_DIRECTORY = '/tmp/kasaya/downloads/';
+
 module.exports = {
   SEARCH_TIME_OUT,
   ASSERTION,
@@ -83,4 +85,5 @@ module.exports = {
   ALERT_HANDLE_ERR,
   BROWSER_EXECUTE_FUNC_ERR,
   INVALID_MODE,
+  DOWNLOAD_DIRECTORY,
 };

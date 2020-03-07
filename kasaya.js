@@ -50,6 +50,11 @@ app.addCommand({
   handler: launch.bind(null, state),
 });
 app.addCommand({
+  command: 'launch $browserName $downloadDirectory',
+  help: 'launch chrome "/tmp/kasaya/downloads" - starts chrome and sets directory for downloads',
+  handler: launch.bind(null, state),
+});
+app.addCommand({
   command: 'open $url',
   help: 'open "google.com" - Navigates to google.com in the current browser window',
   handler: open.bind(null, state, { isNewTab: false }),
