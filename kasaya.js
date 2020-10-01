@@ -40,6 +40,7 @@ const snapshot = require('./src/core/actions/snapshot');
 const execute = require('./src/core/actions/execute');
 const help = require('./src/core/actions/help');
 const screenshot = require('./src/core/actions/screenshot');
+const moveFile = require('./src/core/actions/moveFile');
 
 const app = new Jarvis();
 
@@ -53,6 +54,11 @@ app.addCommand({
   command: 'launch $browserName $downloadDirectory',
   help: 'launch chrome "/tmp/kasaya/downloads" - starts chrome and sets directory for downloads',
   handler: launch.bind(null, state),
+});
+app.addCommand({
+  command: 'move file $source to $destination',
+  help: 'move file "(GLOB)*.pdf" to "/invoice/pdfs/" - moves matched files files to directory (for example: to move downloads)',
+  handler: moveFile.bind(null, state),
 });
 app.addCommand({
   command: 'open $url',
